@@ -19,7 +19,7 @@ export class AppController {
     }
 
     // serve index.html
-    res.sendFile(join(process.cwd(), './client/build/index.html'))
+    res.sendFile('index.html');
 
   }
 }
