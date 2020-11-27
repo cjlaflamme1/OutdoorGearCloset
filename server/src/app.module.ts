@@ -7,7 +7,7 @@ import { join } from 'path';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, "../..", "/client/dist/client/index.html"),
+      rootPath: join(__dirname, "../..", "/client/dist/client/index"),
       exclude: ['/api*'],
     })
   ],
