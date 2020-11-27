@@ -19,7 +19,7 @@ export class AppController {
     }
 
     // serve index.html
-    res.sendFile(join(__dirname, 'outdoorgearcloset','index.html'));
+    res.sendFile(join(__dirname,'index.html'));
 
   }
 }
