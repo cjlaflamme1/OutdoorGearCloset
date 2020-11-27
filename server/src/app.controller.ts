@@ -1,6 +1,6 @@
   
 import { Controller, Get, Res, Next, Req } from '@nestjs/common';
-import path, { join } from 'path';
+import { join } from 'path';
 import { Response, NextFunction, Request } from 'express';
 import { AppService } from './app.service';
 @Controller()
@@ -19,8 +19,7 @@ export class AppController {
     }
 
     // serve index.html
-    // res.sendFile(join(__dirname,'index.html'));
-    res.sendFile(path.resolve('../dist/index.html'));
+    res.sendFile(join(__dirname,'index.html'));
 
   }
 }
