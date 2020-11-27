@@ -7,19 +7,10 @@ import { AppService } from './app.service';
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Get('*')
-  get(
-    @Res() res: Response,
-    @Next() next: NextFunction,
-    @Req() req: Request,
-  ) {
-    // check if requested path is api endpoint - if yes, return next()
-    if (req.path.includes('api')) {
-      return next();
-    }
-
-    // serve index.html
-    res.sendFile(join(__dirname,'index.html'));
+  @Get()
+  getHello() {
+    return this.appService.getHello();
+  }
 
   }
-}
+
