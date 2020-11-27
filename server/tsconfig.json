@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
+    "lib": [
+      "ES5",
+      "ES6"
+    ],
     "module": "commonjs",
+    "moduleResolution": "node",
     "declaration": true,
     "removeComments": true,
     "emitDecoratorMetadata": true,
