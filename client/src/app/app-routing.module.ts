@@ -12,7 +12,11 @@ const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'inventory', component: InventoryComponent},
   { path: 'rentals', component: RentalsComponent},
-  { path: 'customers', component: CustomersComponent}
+  { path: 'customers', component: CustomersComponent},
+  
+  // This path, the wildcard, needs to be the last route listed.
+  { path: '**', component: HomeComponent}
+  
 ];
 
 @NgModule({
