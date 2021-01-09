@@ -22,6 +22,7 @@ import { HomeComponent } from './home/home.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { RentalsComponent } from './rentals/rentals.component';
 import { CustomersComponent } from './customers/customers.component';
+import { SearchComponent } from './inventory/search/search.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,7 +30,8 @@ import { CustomersComponent } from './customers/customers.component';
     HomeComponent,
     InventoryComponent,
     RentalsComponent,
-    CustomersComponent
+    CustomersComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
