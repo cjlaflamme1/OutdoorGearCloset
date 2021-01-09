@@ -24,6 +24,7 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { RentalsComponent } from './rentals/rentals.component';
 import { CustomersComponent } from './customers/customers.component';
 import { SearchComponent } from './inventory/search/search.component';
+import { AddItemComponent } from './inventory/add-item/add-item.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { SearchComponent } from './inventory/search/search.component';
     InventoryComponent,
     RentalsComponent,
     CustomersComponent,
-    SearchComponent
+    SearchComponent,
+    AddItemComponent
   ],
   imports: [
     BrowserModule,
