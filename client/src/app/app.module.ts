@@ -17,11 +17,17 @@ import { MatMenuModule } from '@angular/material/menu';
 
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
+import { InventoryComponent } from './inventory/inventory.component';
+import { RentalsComponent } from './rentals/rentals.component';
+import { CustomersComponent } from './customers/customers.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    HomeComponent
+    HomeComponent,
+    InventoryComponent,
+    RentalsComponent,
+    CustomersComponent
   ],
   imports: [
     BrowserModule,
