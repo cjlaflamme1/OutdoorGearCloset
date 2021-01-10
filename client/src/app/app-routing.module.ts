@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AddCustomerComponent } from './customers/add-customer/add-customer.component';
 import { CustomersComponent } from './customers/customers.component';
+import { SearchCustomersComponent } from './customers/search-customers/search-customers.component';
 import { HomeComponent } from './home/home.component';
 import { AddItemComponent } from './inventory/add-item/add-item.component';
 import { InventoryComponent } from './inventory/inventory.component';
@@ -25,7 +27,19 @@ const routes: Routes = [
     }
   ]},
   { path: 'rentals', component: RentalsComponent},
-  { path: 'customers', component: CustomersComponent},
+  { path: 'customers', 
+  component: CustomersComponent,
+  children: [
+    {
+      path:'search',
+      component: SearchCustomersComponent
+    },
+    {
+      path:'add',
+      component: AddCustomerComponent
+    }
+  ]
+},
   
   // This path, the wildcard, needs to be the last route listed.
   { path: '**', component: HomeComponent}

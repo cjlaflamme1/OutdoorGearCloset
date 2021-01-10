@@ -27,6 +27,8 @@ import { RentalsComponent } from './rentals/rentals.component';
 import { CustomersComponent } from './customers/customers.component';
 import { SearchComponent } from './inventory/search/search.component';
 import { AddItemComponent } from './inventory/add-item/add-item.component';
+import { AddCustomerComponent } from './customers/add-customer/add-customer.component';
+import { SearchCustomersComponent } from './customers/search-customers/search-customers.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,9 @@ import { AddItemComponent } from './inventory/add-item/add-item.component';
     RentalsComponent,
     CustomersComponent,
     SearchComponent,
-    AddItemComponent
+    AddItemComponent,
+    AddCustomerComponent,
+    SearchCustomersComponent
   ],
   imports: [
     BrowserModule,
