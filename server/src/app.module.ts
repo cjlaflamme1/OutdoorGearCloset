@@ -9,6 +9,7 @@ import { Connection } from 'typeorm';
 import { join } from 'path';
 
 import { User } from './users/user.entity';
+import { InventoryItemsModule } from './inventory-items/inventory-items.module';
 
 
 @Module({
@@ -27,7 +28,8 @@ import { User } from './users/user.entity';
       entities: [User],
       synchronize: true,
     }),
-    UsersModule
+    UsersModule,
+    InventoryItemsModule
   ],
   controllers: [AppController],
   providers: [AppService]
