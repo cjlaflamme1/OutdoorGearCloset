@@ -4,13 +4,14 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ServeStaticModule } from "@nestjs/serve-static";
-import { UsersModule } from './users/users.module';
 import { Connection } from 'typeorm';
 import { join } from 'path';
 
 import { User } from './users/user.entity';
-import { InventoryItemsModule } from './inventory-items/inventory-items.module';
+import { InventoryItem } from './inventory-items/inventory-item.entity';
 
+import { UsersModule } from './users/users.module';
+import { InventoryItemsModule } from './inventory-items/inventory-items.module';
 
 @Module({
   imports: [
@@ -25,7 +26,7 @@ import { InventoryItemsModule } from './inventory-items/inventory-items.module';
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
-      entities: [User],
+      entities: [User, InventoryItem],
       synchronize: true,
     }),
     UsersModule,
