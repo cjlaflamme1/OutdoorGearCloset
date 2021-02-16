@@ -13,13 +13,23 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-
+import { MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatTabsModule } from '@angular/material/tabs';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
+import { HttpClientModule} from '@angular/common/http';
 
 import { NavigationComponent } from './navigation/navigation.component';
 import { HomeComponent } from './home/home.component';
 import { InventoryComponent } from './inventory/inventory.component';
 import { RentalsComponent } from './rentals/rentals.component';
 import { CustomersComponent } from './customers/customers.component';
+import { SearchComponent } from './inventory/search/search.component';
+import { AddItemComponent } from './inventory/add-item/add-item.component';
+import { AddCustomerComponent } from './customers/add-customer/add-customer.component';
+import { SearchCustomersComponent } from './customers/search-customers/search-customers.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +37,11 @@ import { CustomersComponent } from './customers/customers.component';
     HomeComponent,
     InventoryComponent,
     RentalsComponent,
-    CustomersComponent
+    CustomersComponent,
+    SearchComponent,
+    AddItemComponent,
+    AddCustomerComponent,
+    SearchCustomersComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +55,14 @@ import { CustomersComponent } from './customers/customers.component';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatTabsModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

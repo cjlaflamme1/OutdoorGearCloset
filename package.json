@@ -21,5 +21,6 @@
       "test": "echo \"Error: no test specified\" && exit 1",
       "install": "npm install --prefix client && npm install --prefix server",
       "heroku-postbuild": "cd client && npm install"
+      
     }
 }

@@ -1,0 +1,30 @@
+<p>add-item works!</p>
+<div class="add-item-container">
+    <form [formGroup]="addItem">
+        <div>
+            <div>
+                <mat-form-field appearance="fill"
+                [floatLabel]='floatLabelControl.value'>
+                <mat-label>Customer Name</mat-label>
+                <input matInput placeholder="Customer Name" required>
+            </mat-form-field>
+
+            </div>
+
+            <div>
+                <mat-form-field appearance="fill"
+                [floatLabel]="floatLabelControl.value">
+              <mat-select required>
+                <mat-option value="Student">Student</mat-option>
+                <mat-option value="Alumni">Alumni</mat-option>
+                <mat-option value="Faculty">Faculty</mat-option>
+                <mat-option value="Employee">Employee</mat-option>
+                <mat-option value="VIP">VIP</mat-option>
+              </mat-select>
+              <mat-label>Customer Type</mat-label>
+            </mat-form-field>
+            </div>
+        </div>
+
+    </form>
+</div>
