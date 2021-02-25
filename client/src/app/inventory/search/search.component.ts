@@ -18,6 +18,9 @@ let ELEMENT_DATA: InventoryItem[] = [];
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
+
+  constructor(private http: HttpClient) { }
+
   displayedColumns: string[] = ['name', 'quantity', 'category'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
   API = environment.backendUrl;
@@ -43,9 +46,6 @@ export class SearchComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-
-
-  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
     this.fetchPosts();
