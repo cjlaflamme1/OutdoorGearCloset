@@ -17,9 +17,18 @@ export class AddCustomerComponent implements OnInit {
   constructor(fb: FormBuilder, private http: HttpClient) { 
     this.addItem = fb.group({
       floatLabel: this.floatLabelControl,
-      
+      name: '',
+      type: ''
     });
   }
+
+  onAddCustomer() {
+    this.http.post(`${this.API}/customer`, this.addItem.value)
+    .subscribe(responseData => {
+      console.log(responseData);
+    })
+  }
+
   ngOnInit(): void {
   }
 

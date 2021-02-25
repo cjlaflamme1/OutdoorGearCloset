@@ -1,11 +1,11 @@
 <div class="add-item-container">
-    <form [formGroup]="addItem">
+    <form [formGroup]="addItem" (ngSubmit)="onAddCustomer()">
         <div>
             <div>
                 <mat-form-field appearance="fill"
                 [floatLabel]='floatLabelControl.value'>
-                <mat-label>Customer Name</mat-label>
-                <input matInput placeholder="Customer Name" required>
+                <mat-label for='name'>Customer Name</mat-label>
+                <input matInput placeholder="Customer Name" required formControlName='name'>
             </mat-form-field>
 
             </div>
@@ -13,7 +13,7 @@
             <div>
                 <mat-form-field appearance="fill"
                 [floatLabel]="floatLabelControl.value">
-              <mat-select required>
+              <mat-select required formControlName='type'>
                 <mat-option value="Student">Student</mat-option>
                 <mat-option value="Alumni">Alumni</mat-option>
                 <mat-option value="Faculty">Faculty</mat-option>
