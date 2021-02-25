@@ -9,9 +9,11 @@ import { join } from 'path';
 
 import { User } from './users/user.entity';
 import { InventoryItem } from './inventory-items/inventory-item.entity';
+import { Customer } from './customer/customer.entity';
 
 import { UsersModule } from './users/users.module';
 import { InventoryItemsModule } from './inventory-items/inventory-items.module';
+import { CustomerModule } from './customer/customer.module';
 
 @Module({
   imports: [
@@ -26,11 +28,12 @@ import { InventoryItemsModule } from './inventory-items/inventory-items.module';
       username: process.env.DB_USERNAME,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_DATABASE,
-      entities: [User, InventoryItem],
+      entities: [User, InventoryItem, Customer],
       synchronize: true,
     }),
     UsersModule,
-    InventoryItemsModule
+    InventoryItemsModule,
+    CustomerModule
   ],
   controllers: [AppController],
   providers: [AppService]
